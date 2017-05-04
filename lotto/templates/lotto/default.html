@@ -14,12 +14,12 @@
   <div class="page-header">
     <h1>My Lotto Page</h1>
     <h2>
-      <a href="{% url 'new_lotto' %}"><span class="glyphicon glyphicon-plus btn btn-default"></span></a>
+      <a href="{% url 'lotto:new_lotto' %}"><span class="glyphicon glyphicon-plus btn btn-default"></span></a>
     </h2>
   </div>
   <div class="container lotto">
     {% for lotto in lottos %}
-    <h2><a herf="{% url 'detail' lottokey=lotto.lottokey %}">{{lotto.text}}</a></h2>
+    <h2><a herf="{% url 'lotto:detail' lottokey=lotto.lottokey %}">{{lotto.text}}</a></h2>
     <p>{{lotto.name}}</p>
     <p> {{lotto.update_date}}</p>
     <p> {{lotto.lottos | linebreaksbr}}</p>

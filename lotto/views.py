@@ -17,7 +17,7 @@ def post(request):
         if form.is_valid():
             lotto = form.save(commit=False)
             lotto.generate()
-            return redirect("index")
+            return redirect("lotto:index")
         return HttpResponse("POST method")
     else:
         form = PostForm()
